@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">PawPal</string>
+
+    <string-array name="pet_types">
+        <item>Выберите тип питомца</item>
+        <item>Собака</item>
+        <item>Кошка</item>
+        <item>Птица</item>
+        <item>Грызун</item>
+        <item>Другое</item>
+    </string-array>
+
+    <string name="add">Добавить</string>
+</resources>

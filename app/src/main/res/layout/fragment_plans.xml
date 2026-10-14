@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pink_bg"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header: Logo + Brand -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <ImageView
+                android:id="@+id/iv_app_logo"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/my_logo"
+                android:contentDescription="@null" />
+
+            <TextView
+                android:id="@+id/tv_brand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:text="PawPal"
+                android:textColor="@color/primary_brown"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Title + subtitle -->
+        <TextView
+            android:id="@+id/tv_plans_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Это дневник Пушистика!"
+            android:textColor="@color/primary_brown"
+            android:textStyle="bold"
+            android:textSize="26sp"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:id="@+id/tv_plans_subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Посмотрите, как был распланирован день Пушистика."
+            android:textColor="@color/text_hint"
+            android:textSize="14sp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Centered Date Chip -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:id="@+id/tv_selected_date"
+                android:layout_width="160dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_date_chip_selector"
+                android:gravity="center"
+                android:paddingHorizontal="16dp"
+                android:text="DECEMBER\n02"
+                android:textAllCaps="true"
+                android:textColor="@color/text_dark"
+                android:textSize="12sp"
+                android:lineSpacingExtra="2dp"
+                android:includeFontPadding="false"
+                android:clickable="true"
+                android:focusable="true"
+                tools:ignore="SmallSp" />
+        </FrameLayout>
+
+        <!-- ===== Card: Сегодняшний план ===== -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_today_plan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:strokeColor="#E6E0E0"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Header line -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Сегодняшний план"
+                        android:textColor="@color/text_dark"
+                        android:textStyle="bold"
+                        android:textSize="16sp" />
+
+                    <ImageButton
+                        android:id="@+id/btn_add_task"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_add_circle"
+                        app:tint="@color/green_status"
+                        android:contentDescription="@string/add" />
+                </LinearLayout>
+
+                <!-- Tasks list -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_tasks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:itemCount="1"
+                    tools:listitem="@layout/item_task" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- ===== Card: Особенные события ===== -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_today_events"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:strokeColor="#E6E0E0"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Header line -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Особенные события на сегодня"
+                        android:textColor="@color/text_dark"
+                        android:textStyle="bold"
+                        android:textSize="16sp" />
+
+                    <ImageButton
+                        android:id="@+id/btn_add_event"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_add_circle"
+                        app:tint="@color/green_status"
+                        android:contentDescription="@string/add" />
+                </LinearLayout>
+
+                <!-- Events list -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_events"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:nestedScrollingEnabled="false"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:itemCount="1"
+                    tools:listitem="@layout/item_event" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="88dp" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

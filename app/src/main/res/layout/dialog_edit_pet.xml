@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText android:id="@+id/etName"      android:hint="Имя"          android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <EditText android:id="@+id/etType"      android:hint="Тип (Кот)"    android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <EditText android:id="@+id/etBreed"     android:hint="Порода"       android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <EditText android:id="@+id/etGender"    android:hint="Пол"          android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <EditText android:id="@+id/etBirthdate" android:hint="Дата рождения (28/04/2021)"
+            android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </LinearLayout>
+</ScrollView>

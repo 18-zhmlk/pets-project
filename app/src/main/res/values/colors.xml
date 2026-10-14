@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFFFF</color>
+    <color name="primary_brown">#523F2B</color>
+    <color name="secondary_pink">#E3B4DB</color>
+    <color name="login_button_green">#41B97D</color>
+    <color name="pink_bg">#E6DAE4</color>
+    <color name="text_dark">#262628</color>
+    <color name="text_hint">#90A0B7</color>
+    <color name="hint">#616161</color>
+    <color name="yellow_event">#DDB05E</color>
+    <color name="green_status">#41B97D</color>
+    <color name="pink_accent">#F30C6C</color>
+    <color name="input_background_light">#F5F5F5</color>
+    <color name="beige_hover">#C3BAB1</color>
+    <color name="menu_background">#FFFFFF</color>
+</resources>

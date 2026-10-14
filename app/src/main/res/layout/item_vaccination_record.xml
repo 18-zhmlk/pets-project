@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="8dp">
+
+    <!-- 1. Текстовое поле с названием вакцины -->
+    <!-- Привязано к левому краю родителя и к левому краю даты -->
+    <TextView
+        android:id="@+id/tv_vaccine_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/text_dark"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_vaccine_date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Вакцинация от бешенства"/>
+
+    <!-- 2. Текстовое поле с датой -->
+    <!-- Привязано к левому краю кнопки редактирования -->
+    <TextView
+        android:id="@+id/tv_vaccine_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:textColor="@color/text_hint"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ivEdit"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="01/03/2020"/>
+
+    <!-- 3. Кнопка "Редактировать" -->
+    <!-- Привязана к левому краю кнопки "Удалить" и к правому краю даты -->
+    <ImageButton
+        android:id="@+id/ivEdit"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Редактировать запись"
+        android:padding="8dp"
+        android:src="@drawable/ic_edit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ivDelete"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 4. Кнопка "Удалить" -->
+    <!-- Привязана к правому краю родителя -->
+    <ImageButton
+        android:id="@+id/ivDelete"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Удалить запись"
+        android:padding="8dp"
+        android:src="@drawable/ic_delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Разделительная линия внизу элемента -->
+    <!-- Я убрал marginTop, так как он мог создать лишний отступ -->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="@color/hint"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Я удалил лишний ImageView (iv_edit_vaccine), так как у вас уже есть ImageButton с такой же иконкой -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

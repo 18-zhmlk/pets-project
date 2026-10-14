@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingVertical="8dp"
+    android:paddingHorizontal="16dp"
+    android:gravity="center_vertical"
+    android:background="?attr/selectableItemBackground">
+
+    <!-- 1. Контейнер для текстовой информации (название и реакция) -->
+    <!-- Он будет занимать все доступное место слева -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- Название аллергии -->
+        <TextView
+            android:id="@+id/tv_allergy_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_dark"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:text="Пыльца" />
+
+        <!-- Реакция на аллергию -->
+        <TextView
+            android:id="@+id/tv_allergy_reaction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_hint"
+            android:textSize="14sp"
+            tools:text="Чихание, зуд" />
+
+    </LinearLayout>
+
+    <!-- 2. Кнопка "Редактировать" -->
+    <!-- Расположена справа от текста -->
+    <ImageButton
+        android:id="@+id/ivEdit"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_edit"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Редактировать аллергию"
+        android:padding="8dp" />
+
+    <!-- 3. Кнопка "Удалить" -->
+    <!-- Расположена справа от кнопки редактирования -->
+    <ImageButton
+        android:id="@+id/ivDelete"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_delete"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Удалить аллергию"
+        android:padding="8dp" />
+
+    <!-- Лишние ImageView (ivEdit и ivDelete) были удалены, так как их роль выполняют ImageButton -->
+
+</LinearLayout>

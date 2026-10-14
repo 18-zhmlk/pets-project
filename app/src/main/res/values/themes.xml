@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="InputStyle" parent="Theme.Material3.Light.NoActionBar">
+
+    </style>
+
+    <style name="SectionTitleStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_dark</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="RegistrationInputStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:background">@drawable/rounded_edittext_bg</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="GreenCheckboxStyle" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="colorAccent">@color/login_button_green</item>
+    </style>
+
+<style name="AccentButtonStyle" parent="Widget.AppCompat.Button.Colored">
+<item name="android:background">@drawable/bg_rounded_button</item>
+    <item name="android:textColor">@color/white</item>
+<item name="android:minHeight">56dp</item>
+<item name="android:textSize">16sp</item>
+<item name="android:textStyle">bold</item>
+</style>
+
+    <style name="LogoutButtonStyle" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:background">@color/pink_accent</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:minHeight">56dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AccentButtonStyleSmall" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:minWidth">60dp</item>
+        <item name="android:minHeight">36dp</item>
+
+        <item name="android:textSize">14sp</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+
+        <item name="android:textColor">@android:color/white</item>
+
+        <item name="cornerRadius">8dp</item>
+    </style>
+
+    <style name="TextInputStyle" parent="android:Widget.EditText">
+        <item name="android:background">@drawable/bg_rounded_button</item> <item name="android:textColor">@color/white</item>
+        <item name="android:minHeight">56dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="AppTheme_BottomSheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="CircleImage">
+    <item name="cornerFamily">rounded</item>
+    <item name="cornerSize">50%</item>
+    </style>
+
+    <!-- Зелёная кнопка Edit под iOS-like -->
+    <style name="Widget.EditRoundedGreen" parent="android:Widget.Material.Button">
+        <item name="android:background">@drawable/rounded_green_button_bg</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:minHeight">40dp</item>
+        <item name="android:minWidth">84dp</item>
+        <item name="android:paddingLeft">14dp</item>
+        <item name="android:paddingRight">14dp</item>
+    </style>
+
+    <style name="BottomNav_NoIndicator" parent="">
+        <!-- делаем индикатор прозрачным и нулевого размера -->
+        <item name="android:color">@android:color/transparent</item>
+        <item name="android:width">0dp</item>
+        <item name="android:height">0dp</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.Material3.Corner.None</item>
+    </style>
+
+</resources>
